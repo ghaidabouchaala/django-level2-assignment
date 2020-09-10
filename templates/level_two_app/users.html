@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Level Two Project</title>
+    </head>
+    <body>
+        <h1>Users List</h1>
+        {% if list_users %}
+        
+        <ul>
+            {% for user in list_users %}                
+
+            <em>{{user.id}}</em>)  User Info
+              
+                    <li>{{user.first_name}}</li>
+                    <li>{{user.last_name}}</li>
+                    <li>{{user.email}}</li>
+
+            {% endfor %}
+    
+        </ul>
+        {% else %}
+                <p> No users yet </p>
+        {% endif %}
+    </body>
+</html>
