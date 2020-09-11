@@ -7,14 +7,16 @@
 
     </head>
     <body>
+        <h2>Fill out the form</h2>
         <div class="container">
-            <div class="jumbotron">
-                <h1>Go to /users to see the list of users</h1>
+            <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
 
-                <h2>Go to /formpage to fill the form </h2>
-            </div>
 
+            </form>
         </div>
-        
+
     </body>
-</html>
+</html> 

@@ -3,25 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title>Level Two Project</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     </head>
     <body>
-        <h1>Users List</h1>
-        {% if list_users %}
-        
-        <ul>
-            {% for user in list_users %}                
+       <!-- 
+            
+                    {% if list_users %}
+                    
+                    <ul>
+                        {% for user in list_users %}                
 
-            <em>{{user.id}}</em>)  User Info
-              
-                    <li>{{user.first_name}}</li>
-                    <li>{{user.last_name}}</li>
-                    <li>{{user.email}}</li>
+                        <em>{{user.id}}</em>)  User Info
+                        
+                                <li>{{user.first_name}}</li>
+                                <li>{{user.last_name}}</li>
+                                <li>{{user.email}}</li>
 
-            {% endfor %}
-    
-        </ul>
-        {% else %}
-                <p> No users yet </p>
-        {% endif %}
+                        {% endfor %}
+                
+                    </ul>
+                    {% else %}
+                            <p> No users yet </p>
+                    {% endif %}
+       --> 
+       <div class="container">
+          <h1> Please sign up here </h1>
+          <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-warning" value="Submit">
+          </form>
+       </div>
+
+
     </body>
 </html>
